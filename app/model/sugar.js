@@ -1,12 +1,11 @@
 // Shared sugar Constructor
 sugarApp.factory("sugar", function(){
     function sugar(plainObject) {
-        this.name = plainObject.name;
-        this.description = plainObject.description;
-        this.duration = plainObject.duration;
-        this.ingrediants = plainObject.ingrediants;
-        this.steps = plainObject.steps;
-        this.imageUrl = plainObject.imageUrl;
+        this.suagrDate = plainObject.suagrDate;
+        this.sugarTime = plainObject.sugarTime;
+        this.sugarWhen = plainObject.sugarWhen;
+        this.sugarValue = plainObject.sugarValue;
+        
     };
 
     return sugar;
