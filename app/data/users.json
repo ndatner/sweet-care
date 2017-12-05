@@ -1,0 +1,9 @@
+[
+    {
+        "email":"noam@gmail.com",
+        "password": "123456",
+        "firstName":"Noam",
+        "lastName": "Datner",
+        "data":"app/data/sugarLog.json"
+    }
+]

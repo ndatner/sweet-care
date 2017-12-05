@@ -1,0 +1,17 @@
+.navbar {
+    margin-bottom: 0;
+}
+
+.navbar-brand {
+    font-family: 'Lobster', cursive;
+}
+
+.jumbotron .container h1 {
+    font-family: 'Lobster', cursive;
+    
+}
+
+.sugar-item {
+    cursor: pointer;
+}
+
