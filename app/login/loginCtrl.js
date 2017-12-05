@@ -1,5 +1,9 @@
 sugarApp.controller("LoginCtrl", function ($scope, $uibModalInstance, $http, $location, activeUser, User) {
 
+    // TODO: Detele this
+    $scope.email = "noam@gmail.com";
+    $scope.password = "123456";
+
         $http.get("app/data/users.json").then(function (response) {
         $scope.users = [];
         for (var i = 0; i < response.data.length; i++) {
