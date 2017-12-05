@@ -6,7 +6,7 @@ sugarApp.controller("sugarGalleryCtrl", function ($scope, $http, $location, acti
         return;
     }
 
-    $scope.greetName = activeUser.get().firstName;
+    
 
     // Making sure that we are only loading once
     if (sugars.getAll().length === 0) {

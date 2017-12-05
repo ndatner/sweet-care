@@ -36,12 +36,10 @@ sugarApp.controller("TestCtrl", function ($scope, User, activeUser, sugar, sugar
     activeUser.logout();
     
     var plainsugar = {
-        "name": "Shakshuka",
-        "description": "An amazing egg dish",
-        "duration": 40,
-        "ingrediants": "Eggs, Tomattos, Oil",
-        "steps": "Heat the pan, put the eggs",
-        "imageUrl": "http://scontent.cdninstagram.com/t51.2885-15/s480x480/e35/c0.37.1080.1080/17438558_192469144582319_1152478392830918656_n.jpg?ig_cache_key=MTQ3NTg0MDMxNjE4ODA0ODY4NA%3D%3D.2.c"
+        "sugarDate": "12/12/2012",
+        "sugarTime": "12:12",
+        "sugarWhen": "Lunch",
+        "sugarValue": 121
     }
 
     var sugar = new sugar(plainsugar);

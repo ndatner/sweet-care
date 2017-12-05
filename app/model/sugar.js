@@ -28,9 +28,9 @@ sugarApp.factory("sugars", function(sugar) {
         sugarArr.splice(index, 1);
     }
 
-    var load = function(receipePlainObjectArr) {
-        for (var i = 0; i < receipePlainObjectArr.length; i++) {
-            sugarArr.push(new sugar(receipePlainObjectArr[i]))
+    var load = function(sugarPlainObjectArr) {
+        for (var i = 0; i < sugarPlainObjectArr.length; i++) {
+            sugarArr.push(new sugar(sugarPlainObjectArr[i]))
         }
     }
 

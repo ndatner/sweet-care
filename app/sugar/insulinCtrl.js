@@ -13,6 +13,7 @@ sugarApp.controller("insulinCtrl", function ($scope, $location, sugars, activeUs
     }
 
     $scope.create = function () {
+        
         sugars.add($scope.sugar);
         $location.path("/sugars");
     }

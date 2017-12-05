@@ -5,6 +5,20 @@
         "sugarWhen" : "Awekening",
         "sugarValue" : 180
         
+    },
+    {
+        "suagrDate": "17/12/2017",
+        "sugarTime": "6:00",
+        "sugarWhen" : "Awekening",
+        "sugarValue" : 180
+        
+    },
+    {
+        "suagrDate": "17/12/2017",
+        "sugarTime": "6:00",
+        "sugarWhen" : "Awekening",
+        "sugarValue" : 180
+        
     }
 
 ]
