@@ -7,7 +7,8 @@ sugarApp.controller("sugarGalleryCtrl", function ($scope, $http, $location, acti
     }
     $scope.addRow = function() {
         sugars.add($scope.sugar);
-        console.log("hello222"+ JSON.stringify(sugars));
+        sugars.load($scope.sugar);
+        console.log("hello222"+ JSON.stringify($scope.sugar));
       };
     
     // Making sure that we are only loading once
@@ -16,9 +17,11 @@ sugarApp.controller("sugarGalleryCtrl", function ($scope, $http, $location, acti
         $http.get(activeUser.get().data).then(function (response) {
             sugars.load(response.data);
             $scope.sugarArr = sugars.getAll();
+            console.log(JSON.stringify($scope.sugarArr))
         });
     } else {
         $scope.sugarArr = sugars.getAll();
+        
     }
 
     $scope.openDetails = function (index) {
