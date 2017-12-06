@@ -25,10 +25,6 @@ sugarApp.factory("sugars", function(sugar) {
         sugarArr[index] = sugar;
     }
 
-    var remove = function(index) {
-        sugarArr.splice(index, 1);
-    }
-
     var load = function(sugarPlainObjectArr) {
         for (var i = 0; i < sugarPlainObjectArr.length; i++) {
             sugarArr.push(new sugar(sugarPlainObjectArr[i]))
@@ -50,7 +46,6 @@ sugarApp.factory("sugars", function(sugar) {
     return {
         add: add,
         update: update,
-        remove: remove,
         load: load,
         getAll: getAll,
         get: get,

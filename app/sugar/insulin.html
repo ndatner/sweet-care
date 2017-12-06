@@ -11,7 +11,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr ng-repeat="insulin in insulinArr">
+            <tr ng-repeat="insulin in insulinArr track by $index">
                 <td>{{insulin.insulinDate}}</td>
                 <td>{{insulin.insulinTime}}</td>
                 <td>{{insulin.insulinWhen}}</td>

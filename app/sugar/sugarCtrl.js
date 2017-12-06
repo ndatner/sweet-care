@@ -7,8 +7,7 @@ sugarApp.controller("sugarCtrl", function ($scope, $http, $location, activeUser,
     }
     $scope.addRow = function() {
         sugars.add($scope.sugar);
-        sugars.load($scope.sugar);
-        
+           
       };
     
     // Making sure that we are only loading once
