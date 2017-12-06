@@ -1,0 +1,57 @@
+<br>
+    <h4>Recently Saved BG Measurements </h4>
+    
+    <div class="table">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>When</th>
+                    <th>BG Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="sugar in sugarArr">
+                    <td>{{sugar.suagrDate}}</td>
+                    <td>{{sugar.sugarTime}}</td>
+                    <td>{{sugar.sugarWhen}}</td>
+                    <td>{{sugar.sugarValue}}</td>
+                    
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <h4>Add new BG Measurement</h4>
+      <form class="form-horizontal" role="form" ng-submit="addRow()">
+            <div class="form-group">
+              <label class="col-md-2 control-label">Date</label>
+              <div class="col-md-4">
+                <input type="date" class="form-control" name="date" ng-model="sugar.sugarDate" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-md-2 control-label">Time</label>
+              <div class="col-md-4">
+                <input type="time" class="form-control" name="time" ng-model="sugar.sugarTime" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-md-2 control-label">When</label>
+              <div class="col-md-4">
+                <input type="text" class="form-control" name="when" ng-model="sugar.sugarWhen" />
+              </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-2 control-label">BG Value</label>
+                <div class="col-md-4">
+                  <input type="number" class="form-control" name="value" ng-model="sugar.sugarValue" />
+                </div>
+              </div>
+          
+            <div class="form-group">
+              <div style="padding-left:150px">
+                <input type="submit" value="Add new Log Entry" class="btn btn-primary" />
+              </div>
+            </div>
+          </form>

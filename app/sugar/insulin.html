@@ -1,46 +1,56 @@
-<!--This view is responsible for showing, updating and deleting a sugar-->
-<div class="container">
+<h4>Recently Insulin Intakes </h4>
 
-  <div class="page-header">
-    <h1>New BG Measurement</h1>
-  </div>
-
-  <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
-    <form class="form-horizontal">
-      <div class="form-group">
-        <label class="control-label col-sm-2" for="suagrDate">Date:</label>
-        <div class="col-sm-10">
-          <input type="text" class="form-control" id="suagrDate" placeholder="Enter date" ng-model="sugar.suagrDate">
-        </div>
-      </div>
-      <div class="form-group">
-        <label class="control-label col-sm-2" for="sugartime">Time:</label>
-        <div class="col-sm-10">
-          <input type="text" class="form-control" id="suagrTime" placeholder="Enter time" ng-model="sugar.suagrTime">
-        </div>
-      </div>
-      <div class="form-group">
-        <label class="control-label col-sm-2" for="sugarwhen">When:</label>
-        <div class="col-sm-10">
-          <input type="text" class="form-control" id="suagrWhen" placeholder="Enter when" ng-model="sugar.suagrWhen">
-        </div>
-      </div>
-      <div class="form-group">
-        <label class="control-label col-sm-2" for="sugarvalue">BG Value:</label>
-        <div class="col-sm-10">
-          <input type="text" class="form-control" id="suagrValue" placeholder="Enter sugar value" ng-model="sugar.suagrValue">
-        </div>
-      </div>
-      
-      <div class="form-group">
-        <div class="col-sm-offset-2 col-sm-10">
-          <div class="pull-right">
-            <button type="summit" class="btn btn-default" ng-click="cancel()">Cancel</button>
-            <button type="summit" class="btn btn-success" ng-click="create()">Create</button>
+<div class="table">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Time</th>
+                <th>When</th>
+                <th>BG Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="insulin in insulinArr">
+                <td>{{insulin.insulinDate}}</td>
+                <td>{{insulin.insulinTime}}</td>
+                <td>{{insulin.insulinWhen}}</td>
+                <td>{{insulin.insulinValue}}</td>
+                
+            </tr>
+        </tbody>
+    </table>
+</div>
+<h4>Add new Insulin Intake</h4>
+  <form class="form-horizontal" role="form" ng-submit="addRow()">
+        <div class="form-group">
+          <label class="col-md-2 control-label">Date</label>
+          <div class="col-md-4">
+            <input type="date" class="form-control" name="date" ng-model="sugar.sugarDate" />
           </div>
         </div>
-      </div>
-    </form>
-  </div>
-
- </div>
+        <div class="form-group">
+          <label class="col-md-2 control-label">Time</label>
+          <div class="col-md-4">
+            <input type="time" class="form-control" name="time" ng-model="sugar.sugarTime" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-md-2 control-label">When</label>
+          <div class="col-md-4">
+            <input type="text" class="form-control" name="when" ng-model="sugar.sugarWhen" />
+          </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-2 control-label">BG Value</label>
+            <div class="col-md-4">
+              <input type="number" class="form-control" name="value" ng-model="sugar.sugarValue" />
+            </div>
+          </div>
+      
+        <div class="form-group">
+          <div style="padding-left:150px">
+            <input type="submit" value="Add new Log Entry" class="btn btn-primary" />
+          </div>
+        </div>
+      </form>

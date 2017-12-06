@@ -7,13 +7,13 @@ sugarApp.config(function ($routeProvider) {
             controller: "HomeCtrl"
         })
         .when("/sugars", {
-            templateUrl: "app/sugar/sugarGallery.html",
-            controller: "sugarGalleryCtrl"
+            templateUrl: "app/sugar/sugar.html",
+            controller: "sugarCtrl"
         })
         .when("/sugars/:sugarIndex", {
             templateUrl: "app/sugar/sugarDetails.html",
             controller: "sugarDetailsCtrl"
-        }).when("/new", {
+        }).when("/insulin", {
             templateUrl: "app/sugar/insulin.html",
             controller: "insulinCtrl"            
         })

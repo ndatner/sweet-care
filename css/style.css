@@ -1,12 +1,19 @@
 .navbar {
     margin-bottom: 0;
-}
+    }
 
 .navbar-brand {
     font-family: 'Lobster', cursive;
+    font-size: 40px;
+}
+
+.nav.navbar-nav {
+    font-family: 'Montserrat', sans-serif;
+    background-color: rgb(196, 216, 230);
 }
 
 .jumbotron .container h1 {
     font-family: 'Lobster', cursive;
     
 }
+

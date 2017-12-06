@@ -18,7 +18,7 @@ sugarApp.factory("sugars", function(sugar) {
 
     var add = function(sugar) {
         sugarArr.push(sugar);
-        console.log("sugarjs" + sugarArr);
+        
     }
 
     var update = function(index, sugar) {
